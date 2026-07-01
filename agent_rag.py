@@ -59,17 +59,7 @@ def run_agent_rag(llm, user_text: str, k: int = 4) -> str:
     action = decide_action(llm, user_text)
 
     if action in RETRIEVAL_ACTIONS:
-        retrieval_query = user_text
-
-        if "discussion" in user_text.lower() or "디스커션" in user_text.lower():
-            retrieval_query += (
-                " lab_paper_style Discussion Analysis Grad-CAM "
-                "class activation map mismatching cases incorrect matching cases "
-                "error cases statistical analysis t-test Cohen computational cost "
-                "domain shift limitations"
-            )
-
-        context = search_life_docs(retrieval_query, k=8)
+        context = search_life_docs(user_text, k=k)
     else:
         context = "문서 검색을 사용하지 않았습니다."
 
