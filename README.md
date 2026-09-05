@@ -79,6 +79,8 @@ local-life-assistant/
 ├─ requirements.txt
 ├─ README.md
 ├─ .gitignore
+├─ assets/
+│  └─ local-agent-rag-demo.png
 ├─ data/
 │  ├─ personal_policy.md
 │  ├─ lab_paper_style.md
@@ -177,6 +179,10 @@ exit
 ```text
 무엇을 도와드릴까요? e-보강 1.5시간 수업은 동영상이 몇 분 이상이어야 해?
 ```
+
+## 실행 예시
+
+![Local Agent RAG demo](assets/local-agent-rag-demo.png)
 
 ## Agent RAG 구조
 
